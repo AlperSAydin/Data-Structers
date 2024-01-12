@@ -18,12 +18,12 @@ void sorter(struct Node **head, int value) {
     newNode->next = NULL;
 
     if (*head == NULL || value >= (*head)->data) {
-        newNode->next = *head; //eğer düğüm boşsa ya da değer head den büyükse başa ekliyoruz
+        newNode->next = *head; //eÃ°er dÃ¼Ã°Ã¼m boÃ¾sa ya da deÃ°er head den bÃ¼yÃ¼kse baÃ¾a ekliyoruz
         *head = newNode;
     } else {
         struct Node *current = *head;
         while (current->next != NULL && current->next->data > value) {
-            current = current->next; //eğer değer nextten küçükse diğer nexte bakıyoruz
+            current = current->next; //eÃ°er deÃ°er nextten kÃ¼Ã§Ã¼kse diÃ°er nexte bakÃ½yoruz
         }
 
         newNode->next = current->next;
@@ -36,10 +36,10 @@ int main() {
     int i;
     struct Node *head = NULL;
 
-    // Rastgele sayı üretmek için zamanı kullanarak srand fonksiyonunu ayarlayın.
+    // Rastgele sayÃ½ Ã¼retmek iÃ§in zamanÃ½ kullanarak srand fonksiyonunu ayarlayÃ½n.
     srand(time(NULL));
 
-    // 1 ile 1000 arası 100 sayi olustur
+    // 1 ile 1000 arasÃ½ 100 sayi olustur
     for (i = 0; i < 100; i++) {
         rastgele_sayilar[i] = rand() % 1000 + 5;
     }
